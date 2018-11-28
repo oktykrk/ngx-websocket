@@ -1,16 +1,22 @@
 {
-  "name": "ngx-websocket",
-  "version": "0.0.0",
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
+  "name": "@miatechnology/ngx-websocket",
+  "version": "1.0.0",
+  "ngPackage": {
+    "lib": {
+      "entryFile": "src/public_api.ts"
+    }
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng-packagr -p package.json",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
-  "dependencies": {
+  "private": false,
+  "peerDependencies": {
     "@angular/animations": "~7.1.0",
     "@angular/common": "~7.1.0",
     "@angular/compiler": "~7.1.0",
@@ -20,7 +26,9 @@
     "@angular/platform-browser-dynamic": "~7.1.0",
     "@angular/router": "~7.1.0",
     "core-js": "^2.5.4",
+    "ng-packagr": "^4.4.0",
     "rxjs": "~6.3.3",
+    "tsickle": "^0.34.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },
